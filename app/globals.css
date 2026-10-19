@@ -1233,3 +1233,23 @@ textarea.input {
   background: var(--ink);
   color: var(--cream);
 }
+
+/* Pie: pertenencia a FEREDE y al Consejo Evangélico de Madrid */
+.members {
+  margin: 0;
+  padding: 22px 0 8px;
+  border-top: 1px solid rgba(237, 226, 204, 0.14);
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+.members a {
+  color: var(--on-navy);
+  text-decoration: underline;
+  text-decoration-color: rgba(237, 226, 204, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.4s ease;
+}
+.members a:hover {
+  text-decoration-color: currentColor;
+}

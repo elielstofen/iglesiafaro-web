@@ -37,6 +37,17 @@ export default function Footer() {
             <a href={site.privacy}>Política de privacidad</a>
           </div>
         </div>
+        <p className="members soft">
+          Iglesia miembro de{" "}
+          <a href="https://ferede.es" target="_blank" rel="noopener">
+            FEREDE
+          </a>
+          , Federación de Entidades Religiosas Evangélicas de España, y del{" "}
+          <a href="https://cemadrid.es" target="_blank" rel="noopener">
+            Consejo Evangélico de Madrid
+          </a>
+          .
+        </p>
       </div>
       <p className="wordmark" aria-hidden="true">
         {"faro".split("").map((l, i) => (
