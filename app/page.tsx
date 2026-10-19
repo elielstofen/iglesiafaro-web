@@ -48,7 +48,6 @@ export default function Home() {
               sizes="(max-width: 900px) 100vw, 66vw"
             />
             <div className="a4" style={{ display: "flex", flexDirection: "column", gap: 36 }}>
-              <Photo className="hide-m" src="/img/amigas-2.webp" alt="Un grupo de chicas de Faro, abrazadas y riendo" position="center 42%" style={{ height: 340 }} sizes="33vw" />
               <p className="body-l" style={{ margin: 0 }}>
                 Buscando juntos a Jesús en el oeste de Madrid. <span className="muted">Te esperamos cada domingo.</span>
               </p>

@@ -65,7 +65,15 @@ export default function Visitanos() {
               Queremos que te sientas en casa desde el primer momento. Esto es lo que te vas a encontrar.
             </p>
           </div>
-          <div className="grid-2 steps" style={{ columnGap: 80 }}>
+          <div className="visit-grid">
+            <Photo
+              className="visit-photo rv"
+              src="/img/amigas-2.webp"
+              alt="Un grupo de chicas de Faro, abrazadas y riendo"
+              position="center 42%"
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+            <div className="steps-col">
             {steps.map((s) => (
               <article key={s.t} className="step rv">
                 <p className="num" style={{ margin: "0 0 12px", fontSize: 26 }}>
@@ -79,6 +87,7 @@ export default function Visitanos() {
                 </p>
               </article>
             ))}
+            </div>
           </div>
         </div>
       </section>
