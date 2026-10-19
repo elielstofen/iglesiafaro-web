@@ -1326,3 +1326,9 @@ textarea.input {
     box-shadow: 0 1px 0 var(--line);
   }
 }
+
+/* Mientras un globito está abierto, su bloque pasa por delante del texto de al lado */
+:is(.rv, .a1, .a2, .a3, .a4, h1, h2, p):has(.pill-wrap:hover) {
+  position: relative;
+  z-index: 35;
+}

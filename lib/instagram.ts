@@ -24,7 +24,7 @@ const PROFILE = "https://www.instagram.com/faromadrid/";
 
 export const fallbackPosts: IgPost[] = [
   { id: "f1", image: "/img/banda.webp", alt: "El equipo de alabanza toca un domingo", href: PROFILE },
-  { id: "f2", image: "/img/alegria.webp", alt: "Una mujer de la comunidad sonríe con las manos juntas", href: PROFILE },
+  { id: "f2", image: "/img/predicacion.webp", alt: "Un domingo en Faro durante la predicación", href: PROFILE },
   { id: "f3", image: "/img/canto.webp", alt: "Una chica canta durante la alabanza", href: PROFILE },
   { id: "f4", image: "/img/manos-abiertas.webp", alt: "Una mujer ora con las manos abiertas", href: PROFILE },
 ];

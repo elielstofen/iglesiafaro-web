@@ -23,7 +23,7 @@ export default function Contacto() {
         <div className="wrap">
           <p className="eyebrow muted a1">Contacto</p>
           <h1 className="h t-hero-xl a2" style={{ marginTop: 32 }}>
-            queremos <Pill src="/img/alegria.webp" position="center 24%" /> <span className="serif accent">conocerte.</span>
+            queremos <Pill src="/img/banda.webp" position="center 35%" /> <span className="serif accent">conocerte.</span>
           </h1>
           <div className="a4" style={{ marginTop: 40, maxWidth: 720 }}>
             <p className="body-l" style={{ margin: "0 0 8px" }}>
