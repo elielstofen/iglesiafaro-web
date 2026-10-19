@@ -373,19 +373,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: scale 1.6s var(--ease);
 }
-/* Todas las fotos responden igual al pasar el ratón: un zoom lento hacia dentro.
-   Se usa la propiedad scale (y no transform) para no chocar con las animaciones
-   de entrada y el parallax, que usan transform y translate. */
-@media (hover: hover) {
-  .ph:hover img {
-    scale: 1.06;
-  }
-  .gal-frame:hover img {
-    scale: 1.22;
-  }
-}
+
 .img-tone {
   filter: saturate(0.9) contrast(1.02);
 }
@@ -416,7 +405,8 @@ p {
     scale 2.6s var(--ease),
     translate 2.6s var(--ease);
 }
-:is(h1, h2):hover .pill {
+/* Solo al pasar el ratón por la propia foto, no por la frase */
+.pill-wrap:hover .pill {
   scale: 1.16;
   translate: 0 -3%;
 }
@@ -487,7 +477,6 @@ p {
   scroll-snap-align: center;
 }
 .gal-frame img {
-  transition: scale 1.6s var(--ease);
   scale: 1.14;
   translate: calc((var(--p, 0.5) - 0.5) * -10%) 0;
 }
@@ -1100,11 +1089,7 @@ textarea.input {
       animation: par linear both;
       animation-timeline: view();
     }
-    @media (hover: hover) {
-      .par:hover img {
-        scale: 1.19;
-      }
-    }
+
     .a3.par img {
       animation: zoom 2.2s var(--ease) 0.5s both, par linear both;
       animation-timeline: auto, view();
@@ -1152,7 +1137,7 @@ textarea.input {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :is(h1, h2):hover .pill {
+  .pill-wrap:hover .pill {
     scale: 1.04;
     translate: none;
   }
@@ -1162,12 +1147,7 @@ textarea.input {
   .pillar:hover .word {
     transform: none;
   }
-  .ph:hover img {
-    scale: 1;
-  }
-  .gal-frame:hover img {
-    scale: 1.14;
-  }
+
   .belief:hover,
   .channel:hover {
     padding-left: 0;
