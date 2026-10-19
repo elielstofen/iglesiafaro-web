@@ -973,18 +973,33 @@ textarea.input {
       animation-timeline: auto, view();
     }
 
-    /* Versículo: las palabras se van iluminando al bajar */
-    .verse {
+    /* Versículo: la sección se queda fija y las palabras se encienden una a una */
+    section.verse-sec {
+      height: 260vh;
+      padding: 0;
       view-timeline: --verse block;
     }
+    .verse-pin {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      height: 100svh;
+      display: flex;
+      align-items: center;
+    }
     @keyframes lightword {
-      from { opacity: 0.16; }
+      from { opacity: 0.12; }
       to { opacity: 1; }
     }
     .verse .lw {
       animation: lightword linear both;
       animation-timeline: --verse;
-      animation-range: cover calc(12% + var(--i) * 1.4%) cover calc(24% + var(--i) * 1.4%);
+      animation-range: contain calc(6% + var(--i) * 3.4%) contain calc(14% + var(--i) * 3.4%);
+    }
+    .verse-ref {
+      animation: lightword linear both;
+      animation-timeline: --verse;
+      animation-range: contain 76% contain 86%;
     }
 
     /* Cabecera: aparece una línea fina en cuanto empiezas a bajar */
@@ -1255,5 +1270,40 @@ textarea.input {
   .wordmark[data-shown="true"] span {
     opacity: 1;
     translate: 0 0;
+  }
+}
+
+/* Versículo grande */
+.verse-sec {
+  padding: var(--section) 0;
+}
+.verse-wrap {
+  width: 100%;
+  text-align: center;
+}
+.verse {
+  margin: 0;
+}
+.verse-text {
+  margin: 0 auto;
+  max-width: 1180px;
+  font-size: clamp(42px, 6.4vw, 100px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+.verse-ref {
+  margin-top: 56px;
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 900px) {
+  .verse-text {
+    font-size: 48px;
+    line-height: 1.06;
+  }
+  .verse-ref {
+    margin-top: 36px;
   }
 }

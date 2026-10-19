@@ -159,21 +159,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Versículo */}
-      <section className="sec" style={{ paddingBottom: 0 }}>
-        <div className="wrap rv" style={{ maxWidth: 1100, textAlign: "center" }}>
-          <blockquote className="verse" style={{ margin: 0 }}>
-            <p className="serif" style={{ margin: 0, fontSize: "clamp(34px, 4.4vw, 60px)", lineHeight: 1.2 }}>
-              {VERSE.split(" ").map((w, i) => (
-                <span key={i} className="lw" style={{ "--i": i } as React.CSSProperties}>
-                  {w}{" "}
-                </span>
-              ))}
-            </p>
-            <footer className="muted" style={{ marginTop: 40, fontSize: 16, letterSpacing: "0.04em" }}>
-              Juan 8:12
-            </footer>
-          </blockquote>
+      {/* 5. Versículo: se queda fijo en pantalla mientras las palabras se iluminan */}
+      <section className="verse-sec" aria-label="Versículo">
+        <div className="verse-pin">
+          <div className="wrap verse-wrap">
+            <blockquote className="verse">
+              <p className="serif verse-text">
+                {VERSE.split(" ").map((w, i) => (
+                  <span key={i} className="lw" style={{ "--i": i } as React.CSSProperties}>
+                    {w}{" "}
+                  </span>
+                ))}
+              </p>
+              <footer className="verse-ref">Juan 8:12</footer>
+            </blockquote>
+          </div>
         </div>
       </section>
 
