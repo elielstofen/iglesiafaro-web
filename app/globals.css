@@ -404,6 +404,8 @@ p {
   display: none;
 }
 @media (hover: hover) {
+  /* Al pasar el ratón, el propio globito crece hasta mostrar la foto entera.
+     La vista grande está fuera del flujo del texto, así que nada se mueve. */
   .pill-wrap {
     cursor: zoom-in;
   }
@@ -412,32 +414,31 @@ p {
     position: absolute;
     z-index: 30;
     left: 50%;
-    top: calc(100% + 14px);
+    top: 50%;
     width: 240px;
-    aspect-ratio: 4 / 5;
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--sand);
-    box-shadow: 0 30px 60px -24px rgba(19, 32, 42, 0.45);
+    height: 300px;
+    transform: translate(-50%, -50%);
     pointer-events: none;
-    opacity: 0;
-    transform: translate(-50%, -10px) scale(0.92);
-    transform-origin: 50% 0;
-    transition:
-      opacity 0.35s ease,
-      transform 0.6s var(--ease);
+    filter: drop-shadow(0 24px 40px rgba(19, 32, 42, 0.28));
   }
   .pill-pop img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    /* Recorte inicial con el tamaño y la forma exactos del globito. */
+    clip-path: inset(calc((300px - 0.74em) / 2) calc((240px - 1.7em) / 2) round 999px);
+    transition:
+      clip-path 0.5s var(--ease-io),
+      opacity 0.15s ease 0.42s;
   }
-  .pill-wrap:hover .pill {
-    transform: scale(1.06);
-  }
-  .pill-wrap:hover .pill-pop {
+  .pill-wrap:hover .pill-pop img {
     opacity: 1;
-    transform: translate(-50%, 0) scale(1);
+    clip-path: inset(0 round 16px);
+    transition:
+      clip-path 0.6s var(--ease-io),
+      opacity 0.05s ease;
   }
 }
 
@@ -961,12 +962,9 @@ textarea.input {
   .pillar:hover .word {
     transform: none;
   }
-  .pill-wrap:hover .pill {
-    transform: none;
-  }
-  .pill-pop {
+  .pill-pop img,
+  .pill-wrap:hover .pill-pop img {
     transition: opacity 0.2s ease !important;
-    transform: translate(-50%, 0) !important;
   }
   .belief:hover,
   .channel:hover {
