@@ -10,6 +10,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
 
+// Texto corto para la vista previa al compartir el enlace (WhatsApp, redes): se lee entero sin cortarse.
+const SHARE_DESCRIPTION = "Un movimiento de Jesús de gente sencilla que adora a un Dios extraordinario. Domingos a las 11:00 en Pozuelo.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -19,12 +22,18 @@ export const metadata: Metadata = {
   description: site.description,
   openGraph: {
     title: "Iglesia Faro - Tu familia en Madrid",
-    description: site.description,
+    description: SHARE_DESCRIPTION,
     url: site.url,
     siteName: site.name,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/img/og.jpg", width: 1200, height: 630, alt: "La comunidad de Faro adorando, con una cruz de luz al fondo" }],
+    images: [{ url: "/img/og-faro.jpg", width: 1200, height: 630, alt: "Logotipo de Faro, 'tu familia en Madrid', junto a una foto de un bautismo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Iglesia Faro - Tu familia en Madrid",
+    description: SHARE_DESCRIPTION,
+    images: ["/img/og-faro.jpg"],
   },
   alternates: { canonical: "/" },
 };
