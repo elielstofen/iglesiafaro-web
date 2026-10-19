@@ -24,7 +24,7 @@ const PROFILE = "https://www.instagram.com/faromadrid/";
 
 export const fallbackPosts: IgPost[] = [
   { id: "f1", image: "/img/conversacion.webp", alt: "Dos jóvenes conversan sentados a una mesa", href: PROFILE },
-  { id: "f2", image: "/img/sonrisa.webp", alt: "Una chica sonríe durante una reunión", href: PROFILE },
+  { id: "f2", image: "/img/alegria.webp", alt: "Una mujer de la comunidad sonríe con las manos juntas", href: PROFILE },
   { id: "f3", image: "/img/risa.webp", alt: "Una mujer de la comunidad ríe durante una reunión", href: PROFILE },
   { id: "f4", image: "/img/oracion.webp", alt: "Una mujer ora con las manos abiertas", href: PROFILE },
 ];

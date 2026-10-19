@@ -47,9 +47,9 @@ export default function Sobre() {
             </div>
             <Photo
               className="a3"
-              src="/img/bautismo.webp"
+              src="/img/bautismo-rio.webp"
               alt="Un bautismo: dos hombres sonríen abrazados, empapados de agua"
-              position="center 30%"
+              position="center 18%"
               priority
               style={{ height: "clamp(440px, 45vw, 620px)" }}
               sizes="(max-width: 900px) 100vw, 66vw"

@@ -11,9 +11,9 @@ export const revalidate = 3600;
 const VERSE = "Yo soy la luz del mundo; el que me sigue no andará en tinieblas, sino que tendrá la luz de la vida.";
 
 const pillars = [
-  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/biblia.webp", alt: "Un hombre lee la Biblia durante una reunión" },
+  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/lectura.webp", alt: "Un hombre lee la Biblia durante una reunión" },
   { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/manos-alzadas.webp", alt: "Un joven adora con los ojos cerrados y la mano en el pecho" },
-  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/conversacion.webp", alt: "Dos jóvenes conversan sentados a una mesa" },
+  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/comunidad.webp", alt: "Varias personas de la comunidad oran juntas por un hombre" },
 ];
 
 export default function Home() {
@@ -39,9 +39,9 @@ export default function Home() {
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
               className="a3"
-              src="/img/adoracion-cruz.webp"
+              src="/img/culto-cruz.webp"
               alt="La comunidad adorando un domingo, con una cruz de luz al fondo"
-              position="center 40%"
+              position="center 30%"
               priority
               style={{ height: "clamp(420px, 50vw, 680px)" }}
               sizes="(max-width: 900px) 100vw, 66vw"
@@ -218,7 +218,7 @@ export default function Home() {
           <div className="split-65 start">
             <div className="rv rvp">
               <h2 className="h" style={{ fontSize: "clamp(54px, 7vw, 88px)", marginBottom: 44 }}>
-                queremos <Pill src="/img/sonrisa.webp" hideMobile /> <span className="serif line accent">conocerte.</span>
+                queremos <Pill src="/img/alegria.webp" position="center 24%" hideMobile /> <span className="serif line accent">conocerte.</span>
               </h2>
               <p className="body-l" style={{ margin: "0 0 8px" }}>
                 ¿Eres nuevo? ¿Tienes preguntas sobre Jesús?

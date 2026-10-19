@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/img/adoracion-cruz.webp", width: 496, height: 674, alt: "La comunidad de Faro adorando un domingo" }],
+    images: [{ url: "/img/og.jpg", width: 1200, height: 630, alt: "La comunidad de Faro adorando, con una cruz de luz al fondo" }],
   },
   alternates: { canonical: "/" },
 };
