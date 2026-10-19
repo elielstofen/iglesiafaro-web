@@ -12,9 +12,9 @@ export const revalidate = 3600;
 const VERSE = "Yo soy la luz del mundo; el que me sigue no andará en tinieblas, sino que tendrá la luz de la vida.";
 
 const pillars = [
-  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/lectura.webp", alt: "Un hombre lee la Biblia durante una reunión" },
-  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/adoracion-pecho.webp", alt: "Un joven adora con los ojos cerrados, la mano en el pecho y el brazo alzado" },
-  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/comunidad.webp", alt: "Varias personas de la comunidad oran juntas por un hombre" },
+  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada." },
+  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente." },
+  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla." },
 ];
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
             {sunday.isToday ? "Hoy" : "Este domingo"}, {m.time} - <span className="hide-m">{m.venue},&nbsp;</span>Pozuelo
           </Link>
           <h1 className="h t-hero a2" style={{ marginTop: 48, maxWidth: 1180 }}>
-            para dar luz <Pill src="/img/oracion-mic.webp" position="center 22%" /> a los que están <span className="nb">en oscuridad</span>{" "}
+            para dar luz <Pill src="/img/pill-oracion-mic.webp" /> a los que están <span className="nb">en oscuridad</span>{" "}
             <span className="serif line accent">
               y guiar nuestros pies por <span className="nb">caminos de paz.</span>
             </span>
@@ -152,7 +152,6 @@ export default function Home() {
                 <p className="muted" style={{ margin: 0, fontSize: 19 }}>
                   {p.text}
                 </p>
-                <Photo className="thumb" src={p.img} alt={p.alt} sizes="160px" />
               </article>
             ))}
           </div>

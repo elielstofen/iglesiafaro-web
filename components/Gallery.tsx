@@ -12,6 +12,7 @@ const frames: Frame[] = [
   { src: "/img/manos-arriba.webp", alt: "Una mujer adora con los brazos alzados", size: "l", align: "mid", position: "center 30%" },
   { src: "/img/predicacion.webp", alt: "La comunidad escucha la predicación en el salón del hotel", size: "w", align: "top" },
   { src: "/img/oracion-mic.webp", alt: "Virginia, la pastora, ora con el micrófono", size: "m", align: "end", position: "center 25%" },
+  { src: "/img/comunidad.webp", alt: "Varias personas de la comunidad oran juntas por un hombre", size: "w", align: "mid" },
   { src: "/img/adoracion-chica.webp", alt: "Una chica adora con las manos abiertas", size: "s", align: "mid", position: "center 30%" },
   { src: "/img/bautismo-rio.webp", alt: "Un bautismo: dos hombres ríen empapados de agua", size: "l", align: "top", position: "center 25%" },
   { src: "/img/alegria.webp", alt: "Una mujer de la comunidad sonríe con las manos juntas", size: "m", align: "end", position: "center 30%" },

@@ -375,8 +375,7 @@ p {
   object-fit: cover;
   transition: transform 1.6s var(--ease);
 }
-.ph:hover img,
-.pillar:hover .ph img {
+.ph:hover img {
   transform: scale(1.06);
 }
 .img-tone {
@@ -404,15 +403,14 @@ p {
   height: 100%;
   border-radius: 999px;
   object-fit: cover;
-  scale: 1.18;
-  translate: -4% 0;
+  scale: 1.04;
   transition:
     scale 2.6s var(--ease),
     translate 2.6s var(--ease);
 }
 :is(h1, h2):hover .pill {
-  scale: 1.32;
-  translate: 4% -2%;
+  scale: 1.16;
+  translate: 0 -3%;
 }
 
 /* Un domingo en Faro: la sección se queda fija y las fotos pasan en horizontal */
@@ -722,7 +720,7 @@ p {
 
 .pillar {
   display: grid;
-  grid-template-columns: 80px minmax(0, 5fr) minmax(0, 4fr) 150px;
+  grid-template-columns: 80px minmax(0, 5fr) minmax(0, 4fr);
   gap: 40px;
   align-items: center;
   padding: 32px 0;
@@ -732,9 +730,6 @@ p {
 }
 .pillar:hover .word {
   transform: translateX(14px);
-}
-.pillar .thumb {
-  height: 188px;
 }
 .num {
   font-family: var(--serif);
@@ -1130,14 +1125,13 @@ textarea.input {
 
 @media (prefers-reduced-motion: reduce) {
   :is(h1, h2):hover .pill {
-    scale: 1.18;
-    translate: -4% 0;
+    scale: 1.04;
+    translate: none;
   }
   html {
     scroll-behavior: auto;
   }
   .ph:hover img,
-  .pillar:hover .ph img,
   .pillar:hover .word {
     transform: none;
   }
@@ -1165,9 +1159,6 @@ textarea.input {
   }
   .pillar {
     grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1fr);
-  }
-  .pillar .thumb {
-    display: none;
   }
 }
 
@@ -1252,18 +1243,12 @@ textarea.input {
     width: 100%;
   }
   .pillar {
-    grid-template-columns: minmax(0, 1fr) 96px;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
     padding: 26px 0;
   }
   .pillar .num {
     display: none;
-  }
-  .pillar .thumb {
-    display: block;
-    height: 120px;
-    grid-column: 2;
-    grid-row: 1 / span 2;
   }
   .pillar .word {
     grid-column: 1;
