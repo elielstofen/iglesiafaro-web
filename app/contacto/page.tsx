@@ -13,7 +13,7 @@ const channels = [
   { label: "Email", value: site.email, href: `mailto:${site.email}` },
   { label: "Instagram", value: site.social.instagramHandle, href: site.social.instagram },
   { label: "Facebook", value: "iglesiafaromadrid", href: site.social.facebook },
-  { label: "Spotify", value: "Nuestras listas", href: site.social.spotify },
+  { label: "Spotify", value: "Nuestras playlists", href: site.social.spotify },
 ];
 
 export default function Contacto() {
