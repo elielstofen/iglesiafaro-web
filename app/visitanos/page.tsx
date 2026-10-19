@@ -25,12 +25,12 @@ export default function Visitanos() {
         <div className="wrap">
           <p className="eyebrow muted a1">Visítanos</p>
           <h1 className="h t-hero-xl a2" style={{ marginTop: 32 }}>
-            te esperamos <Pill src="/img/sentadas.jpg" /> <span className="serif line accent">este domingo.</span>
+            te esperamos <Pill src="/img/sentadas.webp" /> <span className="serif line accent">este domingo.</span>
           </h1>
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
               className="a3"
-              src="/img/risa.jpg"
+              src="/img/risa.webp"
               alt="Una mujer de la comunidad ríe mientras saluda a alguien"
               position="center 30%"
               priority
@@ -122,7 +122,7 @@ export default function Visitanos() {
       <section className="sec">
         <div className="wrap rv rvp" style={{ textAlign: "center" }}>
           <h2 className="h" style={{ fontSize: "clamp(48px, 6vw, 80px)", margin: "0 auto 32px", maxWidth: 1000 }}>
-            ¿tienes <Pill src="/img/sonrisa.jpg" /> <span className="serif accent">preguntas?</span>
+            ¿tienes <Pill src="/img/sonrisa.webp" /> <span className="serif accent">preguntas?</span>
           </h2>
           <p className="muted body-l" style={{ margin: "0 auto 48px", maxWidth: 560 }}>
             Si quieres saber algo antes de venir, escríbenos. Te respondemos encantados.

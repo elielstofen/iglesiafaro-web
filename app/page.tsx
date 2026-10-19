@@ -9,9 +9,9 @@ import { nextSunday } from "@/lib/sunday";
 export const revalidate = 3600;
 
 const pillars = [
-  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/biblia.jpg", alt: "Un hombre lee la Biblia durante una reunión" },
-  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/manos-alzadas.jpg", alt: "Un joven adora con los ojos cerrados y la mano en el pecho" },
-  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/conversacion.jpg", alt: "Dos jóvenes conversan sentados a una mesa" },
+  { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/biblia.webp", alt: "Un hombre lee la Biblia durante una reunión" },
+  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/manos-alzadas.webp", alt: "Un joven adora con los ojos cerrados y la mano en el pecho" },
+  { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/conversacion.webp", alt: "Dos jóvenes conversan sentados a una mesa" },
 ];
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
             {sunday.isToday ? "Hoy" : "Este domingo"}, {m.time} - <span className="hide-m">{m.venue},&nbsp;</span>Pozuelo
           </Link>
           <h1 className="h t-hero a2" style={{ marginTop: 48, maxWidth: 1180 }}>
-            para dar luz <Pill src="/img/oracion.jpg" /> a los que están <span className="nb">en oscuridad</span>{" "}
+            para dar luz <Pill src="/img/oracion.webp" /> a los que están <span className="nb">en oscuridad</span>{" "}
             <span className="serif line accent">
               y guiar nuestros pies por <span className="nb">caminos de paz.</span>
             </span>
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
               className="a3"
-              src="/img/adoracion-cruz.jpg"
+              src="/img/adoracion-cruz.webp"
               alt="La comunidad adorando un domingo, con una cruz de luz al fondo"
               position="center 40%"
               priority
@@ -45,7 +45,7 @@ export default function Home() {
               sizes="(max-width: 900px) 100vw, 66vw"
             />
             <div className="a4" style={{ display: "flex", flexDirection: "column", gap: 36 }}>
-              <Photo className="hide-m" src="/img/amigas.jpg" alt="Un grupo de chicas de Faro, abrazadas y riendo" style={{ height: 340 }} sizes="33vw" />
+              <Photo className="hide-m" src="/img/amigas.webp" alt="Un grupo de chicas de Faro, abrazadas y riendo" style={{ height: 340 }} sizes="33vw" />
               <p className="body-l" style={{ margin: 0 }}>
                 Buscando juntos a Jesús en el oeste de Madrid. <span className="muted">Te esperamos cada domingo.</span>
               </p>
@@ -116,7 +116,7 @@ export default function Home() {
             En la tierra como en el cielo.
           </p>
           <p className="h rv rvp" style={{ fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.12, maxWidth: 1180 }}>
-            Faro es un movimiento por Jesús <Pill src="/img/risa.jpg" /> de gente sencilla <Pill src="/img/sentadas.jpg" /> que adora{" "}
+            Faro es un movimiento por Jesús <Pill src="/img/risa.webp" /> de gente sencilla <Pill src="/img/sentadas.webp" /> que adora{" "}
             <span className="serif accent">
               <span className="nb">a un Dios</span> extraordinario.
             </span>
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="split-65 start">
             <div className="rv rvp">
               <h2 className="h" style={{ fontSize: "clamp(54px, 7vw, 88px)", marginBottom: 44 }}>
-                queremos <Pill src="/img/sonrisa.jpg" /> <span className="serif line accent">conocerte.</span>
+                queremos <Pill src="/img/sonrisa.webp" /> <span className="serif line accent">conocerte.</span>
               </h2>
               <p className="body-l" style={{ margin: "0 0 8px" }}>
                 ¿Eres nuevo? ¿Tienes preguntas sobre Jesús?

@@ -23,10 +23,10 @@ type ApiMedia = {
 const PROFILE = "https://www.instagram.com/faromadrid/";
 
 export const fallbackPosts: IgPost[] = [
-  { id: "f1", image: "/img/chico.jpg", alt: "Un chico sonríe durante una reunión", href: PROFILE },
-  { id: "f2", image: "/img/sonrisa.jpg", alt: "Una chica sonríe durante una reunión", href: PROFILE },
-  { id: "f3", image: "/img/alabanza-mic.jpg", alt: "Una mujer canta con el micrófono y la mano en el pecho", href: PROFILE },
-  { id: "f4", image: "/img/oracion.jpg", alt: "Una mujer ora con las manos abiertas", href: PROFILE },
+  { id: "f1", image: "/img/conversacion.webp", alt: "Dos jóvenes conversan sentados a una mesa", href: PROFILE },
+  { id: "f2", image: "/img/sonrisa.webp", alt: "Una chica sonríe durante una reunión", href: PROFILE },
+  { id: "f3", image: "/img/risa.webp", alt: "Una mujer de la comunidad ríe durante una reunión", href: PROFILE },
+  { id: "f4", image: "/img/oracion.webp", alt: "Una mujer ora con las manos abiertas", href: PROFILE },
 ];
 
 function shortCaption(caption?: string) {

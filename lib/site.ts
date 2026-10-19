@@ -36,11 +36,12 @@ export const site = {
     ofrenda: "https://donate.stripe.com/7sIbK1amc3UzaukaEE",
   },
 
-  // Enlaces de la app Faro Madrid en las tiendas. Pendientes de confirmar.
+  // Enlaces de la app Faro Madrid en las tiendas.
+  // Google Play está en revisión: cuando esté publicada, pon aquí su enlace
+  // (o en la variable NEXT_PUBLIC_GOOGLE_PLAY_URL) y el botón aparecerá solo.
   app: {
-    appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || "https://apps.apple.com/es/search?term=Faro%20Madrid",
-    googlePlay:
-      process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "https://play.google.com/store/search?q=Faro%20Madrid&c=apps",
+    appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || "https://apps.apple.com/es/app/faro-madrid/id6746827660",
+    googlePlay: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "",
   },
 
   privacy: "https://app.iglesiafaro.com/privacidad",

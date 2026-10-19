@@ -31,7 +31,7 @@ export default function Sobre() {
         <div className="wrap">
           <p className="eyebrow muted a1">Sobre nosotros</p>
           <h1 className="h t-hero a2" style={{ marginTop: 32, maxWidth: 1180 }}>
-            un movimiento de Jesús, de gente sencilla <Pill src="/img/risa.jpg" />{" "}
+            un movimiento de Jesús, de gente sencilla <Pill src="/img/risa.webp" />{" "}
             <span className="serif line accent">
               que adora a un <span className="nb">Dios extraordinario.</span>
             </span>
@@ -47,7 +47,7 @@ export default function Sobre() {
             </div>
             <Photo
               className="a3"
-              src="/img/bautismo.jpg"
+              src="/img/bautismo.webp"
               alt="Un bautismo: dos hombres sonríen abrazados, empapados de agua"
               position="center 30%"
               priority

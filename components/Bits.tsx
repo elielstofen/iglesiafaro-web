@@ -57,10 +57,14 @@ export function StoreButtons({ variant = "dark", long = false }: { variant?: "da
         {long && <StoreIcon />}
         {long ? "Descargar en App Store" : "App Store"}
       </a>
-      <a className={cls} href={site.app.googlePlay} target="_blank" rel="noopener">
-        {long && <StoreIcon />}
-        {long ? "Disponible en Google Play" : "Google Play"}
-      </a>
+      {site.app.googlePlay ? (
+        <a className={cls} href={site.app.googlePlay} target="_blank" rel="noopener">
+          {long && <StoreIcon />}
+          {long ? "Disponible en Google Play" : "Google Play"}
+        </a>
+      ) : (
+        <span className="soon">Pronto en Google Play</span>
+      )}
     </div>
   );
 }
