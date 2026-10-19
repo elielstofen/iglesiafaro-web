@@ -120,9 +120,9 @@ export default function Visitanos() {
       </section>
 
       <section className="sec">
-        <div className="wrap rv rvp" style={{ textAlign: "center" }}>
+        <div className="wrap rv" style={{ textAlign: "center" }}>
           <h2 className="h" style={{ fontSize: "clamp(48px, 6vw, 80px)", margin: "0 auto 32px", maxWidth: 1000 }}>
-            ¿tienes <Pill src="/img/alegria.webp" position="center 24%" /> <span className="serif accent">preguntas?</span>
+            ¿tienes <span className="serif accent">preguntas?</span>
           </h2>
           <p className="muted body-l" style={{ margin: "0 auto 48px", maxWidth: 560 }}>
             Si quieres saber algo antes de venir, escríbenos. Te respondemos encantados.

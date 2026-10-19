@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Photo from "@/components/Photo";
 import ContactForm from "@/components/ContactForm";
+import Gallery from "@/components/Gallery";
 import { Arrow, AppPhone, GiveBand, InstagramGrid, MapEmbed, Pill, StoreButtons } from "@/components/Bits";
 import { site } from "@/lib/site";
 import { nextSunday } from "@/lib/sunday";
@@ -117,8 +118,8 @@ export default function Home() {
           <p className="muted rv" style={{ margin: "0 0 32px", fontSize: 18 }}>
             En la tierra como en el cielo.
           </p>
-          <p className="h rv rvp" style={{ fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.12, maxWidth: 1180 }}>
-            Faro es un movimiento por Jesús <Pill src="/img/canto.webp" position="center 30%" /> de gente sencilla <Pill src="/img/manos-arriba.webp" position="center 28%" /> que adora{" "}
+          <p className="h rv" style={{ fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.12, maxWidth: 1180 }}>
+            Faro es un movimiento por Jesús de gente sencilla que adora{" "}
             <span className="serif accent">
               <span className="nb">a un Dios</span> extraordinario.
             </span>
@@ -134,6 +135,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Gallery />
 
       {/* 4. Pilares */}
       <section className="sec sand">
@@ -216,9 +219,9 @@ export default function Home() {
       <section id="contacto" className="sec">
         <div className="wrap">
           <div className="split-65 start">
-            <div className="rv rvp">
+            <div className="rv">
               <h2 className="h" style={{ fontSize: "clamp(54px, 7vw, 88px)", marginBottom: 44 }}>
-                queremos <Pill src="/img/amigas-2.webp" position="center 42%" hideMobile /> <span className="serif line accent">conocerte.</span>
+                queremos <span className="serif line accent">conocerte.</span>
               </h2>
               <p className="body-l" style={{ margin: "0 0 8px" }}>
                 ¿Eres nuevo? ¿Tienes preguntas sobre Jesús?
