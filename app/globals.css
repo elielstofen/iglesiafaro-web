@@ -576,11 +576,14 @@ p {
 }
 .logo {
   justify-self: start;
+  display: inline-flex;
   text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: -0.03em;
   line-height: 1;
+}
+.logo svg {
+  display: block;
+  height: 23px;
+  width: auto;
 }
 .nav {
   display: flex;
@@ -984,14 +987,18 @@ textarea.input {
   color: rgba(237, 226, 204, 0.72);
 }
 .wordmark {
-  margin: 0;
-  text-align: center;
-  font-size: min(400px, 28vw);
-  line-height: 0.74;
-  font-weight: 300;
-  letter-spacing: -0.06em;
-  transform: translateY(14%);
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--gutter);
+  margin-top: clamp(24px, 4vw, 56px);
+  margin-bottom: -2.2%;
   user-select: none;
+}
+.wordmark svg {
+  display: block;
+  width: min(1040px, 100%);
+  height: auto;
+  overflow: visible;
 }
 
 /* Movimiento */
@@ -1196,8 +1203,8 @@ textarea.input {
     height: 68px;
     grid-template-columns: 1fr auto;
   }
-  .logo {
-    font-size: 28px;
+  .logo svg {
+    height: 20px;
   }
   .split,
   .split-48,
@@ -1342,8 +1349,8 @@ textarea.input {
     gap: 28px 20px;
     padding: 36px 0;
   }
-  .wordmark {
-    font-size: 170px;
+  .wordmark svg {
+    width: 100%;
   }
 }
 
@@ -1380,15 +1387,15 @@ textarea.input {
 
 /* Letras del "faro" del pie: suben una a una al aparecer (funciona en todos los navegadores) */
 @media (prefers-reduced-motion: no-preference) {
-  .wordmark span {
-    display: inline-block;
+  .wordmark path {
+    transform-box: fill-box;
     opacity: 0;
     translate: 0 70%;
     transition:
       translate 1.2s var(--ease) calc(var(--i) * 0.11s),
       opacity 0.9s ease calc(var(--i) * 0.11s);
   }
-  .wordmark[data-shown="true"] span {
+  .wordmark[data-shown="true"] path {
     opacity: 1;
     translate: 0 0;
   }

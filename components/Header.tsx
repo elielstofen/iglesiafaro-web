@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Logo from "./Logo";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
@@ -35,7 +36,7 @@ export default function Header() {
       <header className="header">
         <div className="wrap header-in">
           <Link href="/" className="logo" aria-label="Iglesia Faro, inicio">
-            faro
+            <Logo />
           </Link>
           <nav className="nav" aria-label="Principal">
             {mainNav.map((item) => (
@@ -64,8 +65,8 @@ export default function Header() {
 
       <div id="menu-movil" className="mobile-menu" data-open={open} aria-hidden={!open} role="dialog" aria-modal="true" aria-label="Menú">
         <div className="mobile-menu-top">
-          <Link href="/" className="logo" tabIndex={open ? 0 : -1}>
-            faro
+          <Link href="/" className="logo" tabIndex={open ? 0 : -1} aria-label="Iglesia Faro, inicio">
+            <Logo />
           </Link>
           <button type="button" className="menu-btn" style={{ display: "flex" }} aria-label="Cerrar menú" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round">

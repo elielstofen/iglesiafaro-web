@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { LOGO_LETTERS, LOGO_VIEWBOX } from "@/lib/logo";
 
-// "faro" grande del pie: las letras suben una a una cuando aparece en pantalla.
+// Logotipo oficial grande del pie: las letras suben una a una cuando aparece en pantalla.
 export default function Wordmark() {
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
@@ -24,12 +25,12 @@ export default function Wordmark() {
   }, []);
 
   return (
-    <p ref={ref} className="wordmark" data-shown={shown} aria-hidden="true">
-      {"faro".split("").map((l, i) => (
-        <span key={i} style={{ "--i": i } as React.CSSProperties}>
-          {l}
-        </span>
-      ))}
-    </p>
+    <div ref={ref} className="wordmark" data-shown={shown} aria-hidden="true">
+      <svg viewBox={LOGO_VIEWBOX} fill="currentColor">
+        {LOGO_LETTERS.map((d, i) => (
+          <path key={i} d={d} fillRule="evenodd" style={{ "--i": i } as React.CSSProperties} />
+        ))}
+      </svg>
+    </div>
   );
 }
