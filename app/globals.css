@@ -401,45 +401,137 @@ p {
   object-fit: cover;
   transition: transform 0.7s var(--ease);
 }
-.pill-pop {
-  display: none;
+/* Tarjeta que se abre hacia un lado al pasar el ratón por un globito.
+   Cerrada, su recorte coincide con el globito; al abrirse se estira hacia el lado. */
+.pill-wrap {
+  cursor: pointer;
+  --pw: 1.7em;
+  --ph: 0.74em;
+  --cw: 248px;
+  --ch: 360px;
 }
-@media (hover: hover) {
-  /* Al pasar el ratón, el propio globito crece hasta mostrar la foto entera.
-     La vista grande está fuera del flujo del texto, así que nada se mueve. */
-  .pill-wrap {
-    cursor: zoom-in;
-  }
-  .pill-pop {
-    display: block;
-    position: absolute;
-    z-index: 30;
+.pill-card {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  left: -6px;
+  width: 248px;
+  padding: 8px;
+  border-radius: 20px;
+  background: #fbf8f2;
+  box-shadow: 0 30px 70px -28px rgba(19, 32, 42, 0.45);
+  pointer-events: none;
+  opacity: 0;
+  translate: 0 -50%;
+  clip-path: inset(
+    calc((var(--ch) - var(--ph)) / 2) calc(var(--cw) - var(--pw) - 6px) calc((var(--ch) - var(--ph)) / 2) 6px
+      round calc(var(--ph) / 2)
+  );
+  transition:
+    clip-path 0.5s var(--ease-io),
+    opacity 0.12s ease 0.42s;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--ink);
+  text-align: left;
+  white-space: normal;
+}
+.pill-wrap[data-side="left"] .pill-card {
+  left: auto;
+  right: -6px;
+  clip-path: inset(
+    calc((var(--ch) - var(--ph)) / 2) 6px calc((var(--ch) - var(--ph)) / 2) calc(var(--cw) - var(--pw) - 6px)
+      round calc(var(--ph) / 2)
+  );
+}
+.pill-card-photo {
+  display: block;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.pill-card-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.15;
+  transition: scale 0.9s var(--ease);
+}
+.pill-card-cap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 8px 6px;
+  opacity: 0;
+  translate: 0 6px;
+  transition:
+    opacity 0.25s ease,
+    translate 0.25s ease;
+}
+.pill-card-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.05;
+  color: var(--accent);
+}
+.pill-card-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+/* Abierta */
+.pill-wrap[data-open="true"] .pill-card,
+.pill-wrap[data-side="left"][data-open="true"] .pill-card {
+  opacity: 1;
+  clip-path: inset(0 0 0 0 round 20px);
+  transition:
+    clip-path 0.75s var(--ease-io),
+    opacity 0.05s ease;
+}
+.pill-wrap[data-open="true"] .pill-card-photo img {
+  scale: 1;
+}
+.pill-wrap[data-open="true"] .pill-card-cap {
+  opacity: 1;
+  translate: 0 0;
+  transition-delay: 0.45s;
+}
+/* Móvil: al tocar el globito, la tarjeta aparece debajo, centrada en la pantalla */
+@media (max-width: 900px) {
+  .pill-card,
+  .pill-wrap[data-side="left"] .pill-card {
+    top: calc(100% + 12px);
     left: 50%;
-    top: 50%;
-    width: 240px;
-    height: 300px;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    filter: drop-shadow(0 24px 40px rgba(19, 32, 42, 0.28));
-  }
-  .pill-pop img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    /* Recorte inicial con el tamaño y la forma exactos del globito. */
-    clip-path: inset(calc((300px - 0.74em) / 2) calc((240px - 1.7em) / 2) round 999px);
+    right: auto;
+    width: min(340px, calc(100vw - 40px));
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    clip-path: none;
+    translate: calc(-50% + var(--mx, 0px)) 12px;
     transition:
-      clip-path 0.5s var(--ease-io),
-      opacity 0.15s ease 0.42s;
+      translate 0.4s var(--ease),
+      opacity 0.25s ease;
   }
-  .pill-wrap:hover .pill-pop img {
-    opacity: 1;
-    clip-path: inset(0 round 16px);
+  .pill-wrap[data-open="true"] .pill-card,
+  .pill-wrap[data-side="left"][data-open="true"] .pill-card {
+    clip-path: none;
+    translate: calc(-50% + var(--mx, 0px)) 0;
     transition:
-      clip-path 0.6s var(--ease-io),
-      opacity 0.05s ease;
+      translate 0.4s var(--ease),
+      opacity 0.25s ease;
+  }
+  .pill-card-photo {
+    width: 104px;
+    flex: none;
+  }
+  .pill-card-cap {
+    padding: 4px 10px;
   }
 }
 
@@ -1024,9 +1116,12 @@ textarea.input {
   .pillar:hover .word {
     transform: none;
   }
-  .pill-pop img,
-  .pill-wrap:hover .pill-pop img {
+  .pill-card,
+  .pill-card-cap,
+  .pill-card-photo img {
     transition: opacity 0.2s ease !important;
+    clip-path: none !important;
+    scale: 1 !important;
   }
   .belief:hover,
   .channel:hover {
@@ -1328,7 +1423,7 @@ textarea.input {
 }
 
 /* Mientras un globito está abierto, su bloque pasa por delante del texto de al lado */
-:is(.rv, .a1, .a2, .a3, .a4, h1, h2, p):has(.pill-wrap:hover) {
+:is(.rv, .a1, .a2, .a3, .a4, h1, h2, p):has(.pill-wrap[data-open="true"]) {
   position: relative;
   z-index: 35;
 }

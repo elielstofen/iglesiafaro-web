@@ -31,7 +31,7 @@ export default function Sobre() {
         <div className="wrap">
           <p className="eyebrow muted a1">Sobre nosotros</p>
           <h1 className="h t-hero a2" style={{ marginTop: 32, maxWidth: 1180 }}>
-            un movimiento de Jesús, de gente sencilla <Pill src="/img/adoracion-brazo.webp" position="center 24%" />{" "}
+            un movimiento de Jesús, de gente sencilla <Pill src="/img/adoracion-brazo.webp" position="center 24%" name="Soy Dani." />{" "}
             <span className="serif line accent">
               que adora a un <span className="nb">Dios extraordinario.</span>
             </span>
