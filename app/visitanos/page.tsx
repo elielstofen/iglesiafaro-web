@@ -25,7 +25,7 @@ export default function Visitanos() {
         <div className="wrap">
           <p className="eyebrow muted a1">Visítanos</p>
           <h1 className="h t-hero-xl a2" style={{ marginTop: 32 }}>
-            te esperamos <Pill src="/img/adoracion-chica.webp" position="center 26%" hideMobile name="Soy Diana." /> <span className="serif line accent">este domingo.</span>
+            te esperamos <Pill src="/img/adoracion-chica.webp" position="center 26%" hideMobile /> <span className="serif line accent">este domingo.</span>
           </h1>
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo

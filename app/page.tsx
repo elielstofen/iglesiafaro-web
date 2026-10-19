@@ -30,7 +30,7 @@ export default function Home() {
             {sunday.isToday ? "Hoy" : "Este domingo"}, {m.time} - <span className="hide-m">{m.venue},&nbsp;</span>Pozuelo
           </Link>
           <h1 className="h t-hero a2" style={{ marginTop: 48, maxWidth: 1180 }}>
-            para dar luz <Pill src="/img/oracion-mic.webp" position="center 22%" name="Soy Virginia." note="Pastora de Faro" /> a los que están <span className="nb">en oscuridad</span>{" "}
+            para dar luz <Pill src="/img/oracion-mic.webp" position="center 22%" /> a los que están <span className="nb">en oscuridad</span>{" "}
             <span className="serif line accent">
               y guiar nuestros pies por <span className="nb">caminos de paz.</span>
             </span>
@@ -118,7 +118,7 @@ export default function Home() {
             En la tierra como en el cielo.
           </p>
           <p className="h rv rvp" style={{ fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.12, maxWidth: 1180 }}>
-            Faro es un movimiento por Jesús <Pill src="/img/canto.webp" position="center 30%" name="Soy Sara." /> de gente sencilla <Pill src="/img/manos-arriba.webp" position="center 28%" name="Soy Nancy." /> que adora{" "}
+            Faro es un movimiento por Jesús <Pill src="/img/canto.webp" position="center 30%" /> de gente sencilla <Pill src="/img/manos-arriba.webp" position="center 28%" /> que adora{" "}
             <span className="serif accent">
               <span className="nb">a un Dios</span> extraordinario.
             </span>

@@ -1427,3 +1427,111 @@ textarea.input {
   position: relative;
   z-index: 35;
 }
+
+/* Portada: la foto sale del globito y ocupa un lateral (o el centro) de la pantalla */
+.pill-dim {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(14, 24, 32, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.pill-dim[data-effect="flotante"] {
+  background: rgba(14, 24, 32, 0.4);
+}
+.pill-dim[data-effect="centro"] {
+  background: rgba(14, 24, 32, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.pill-dim[data-open="true"] {
+  opacity: 1;
+}
+.pill-cover {
+  position: fixed;
+  z-index: 61;
+  left: var(--x0, 0);
+  top: var(--y0, 0);
+  width: var(--w0, 0);
+  height: var(--h0, 0);
+  border-radius: calc(var(--h0, 0px) / 2);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--sand);
+  transition:
+    left 0.6s var(--ease-io),
+    top 0.6s var(--ease-io),
+    width 0.6s var(--ease-io),
+    height 0.6s var(--ease-io),
+    border-radius 0.6s var(--ease-io),
+    opacity 0.15s ease 0.5s;
+}
+.pill-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.12;
+  transition: scale 1.1s var(--ease);
+}
+.pill-cover[data-open="true"] {
+  opacity: 1;
+  transition:
+    left 0.75s var(--ease-io),
+    top 0.75s var(--ease-io),
+    width 0.75s var(--ease-io),
+    height 0.75s var(--ease-io),
+    border-radius 0.75s var(--ease-io),
+    opacity 0.01s;
+}
+.pill-cover[data-open="true"] img {
+  scale: 1;
+}
+/* B. Portada a sangre en el lateral contrario al globito */
+.pill-cover[data-open="true"][data-effect="lado"] {
+  top: 0;
+  left: 58vw;
+  width: 42vw;
+  height: 100vh;
+  border-radius: 0;
+}
+.pill-cover[data-open="true"][data-effect="lado"][data-side="left"] {
+  left: 0;
+}
+/* C. Portada flotante en el lateral, con margen y esquinas */
+.pill-cover[data-open="true"][data-effect="flotante"] {
+  top: 24px;
+  left: calc(100vw - 38vw - 24px);
+  width: 38vw;
+  height: calc(100vh - 48px);
+  border-radius: 24px;
+}
+.pill-cover[data-open="true"][data-effect="flotante"][data-side="left"] {
+  left: 24px;
+}
+/* D. Portada en el centro */
+.pill-cover[data-open="true"][data-effect="centro"] {
+  top: 13vh;
+  left: calc(50vw - min(29vh, 43vw));
+  width: min(58vh, 86vw);
+  height: 74vh;
+  border-radius: 20px;
+}
+@media (max-width: 900px) {
+  .pill-cover[data-open="true"][data-effect] {
+    top: 12vh;
+    left: 5vw;
+    width: 90vw;
+    height: 76vh;
+    border-radius: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill-cover,
+  .pill-cover[data-open="true"] {
+    transition: opacity 0.2s ease !important;
+  }
+}
