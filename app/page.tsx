@@ -218,7 +218,7 @@ export default function Home() {
           <div className="split-65 start">
             <div className="rv rvp">
               <h2 className="h" style={{ fontSize: "clamp(54px, 7vw, 88px)", marginBottom: 44 }}>
-                queremos <Pill src="/img/sonrisa.webp" /> <span className="serif line accent">conocerte.</span>
+                queremos <Pill src="/img/sonrisa.webp" hideMobile /> <span className="serif line accent">conocerte.</span>
               </h2>
               <p className="body-l" style={{ margin: "0 0 8px" }}>
                 ¿Eres nuevo? ¿Tienes preguntas sobre Jesús?

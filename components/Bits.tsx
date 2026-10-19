@@ -2,12 +2,12 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { getInstagramPosts } from "@/lib/instagram";
 
-export function Pill({ src }: { src: string }) {
+export function Pill({ src, hideMobile }: { src: string; hideMobile?: boolean }) {
   // Decorativa: la frase se entiende sin la imagen.
   // eslint-disable-next-line @next/next/no-img-element
   // Al pasar el ratón se abre una vista ampliada encima, sin mover el texto.
   return (
-    <span className="pill-wrap" aria-hidden="true">
+    <span className={hideMobile ? "pill-wrap hide-m" : "pill-wrap"} aria-hidden="true">
       <img className="pill img-tone" src={src} alt="" />
       <span className="pill-pop">
         <img className="img-tone" src={src} alt="" loading="lazy" />

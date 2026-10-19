@@ -96,7 +96,7 @@ export default function Sobre() {
       <section id="creemos" className="sec" style={{ scrollMarginTop: 80 }}>
         <div className="wrap">
           <div className="split-48 start">
-            <h2 className="h t-1 rv" style={{ position: "sticky", top: 140 }}>
+            <h2 className="h t-1 rv creemos-title">
               qué <span className="serif accent">creemos.</span>
             </h2>
             <div className="rows">
