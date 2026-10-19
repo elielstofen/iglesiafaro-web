@@ -382,18 +382,63 @@ p {
   filter: saturate(0.9) contrast(1.02);
 }
 
-.pill {
+/* El hueco de la foto está reservado desde el principio: solo se animan
+   transform, clip-path y opacity, así las palabras de alrededor no se mueven. */
+.pill-wrap {
+  position: relative;
   display: inline-block;
   height: 0.74em;
   width: 1.7em;
+  margin: 0 0.06em;
+  vertical-align: -0.04em;
+}
+.pill {
+  display: block;
+  width: 100%;
+  height: 100%;
   border-radius: 999px;
   object-fit: cover;
-  vertical-align: -0.04em;
-  margin: 0 0.06em;
-  transition: width 0.7s var(--ease);
+  transition: transform 0.7s var(--ease);
 }
-.pill:hover {
-  width: 2.3em;
+.pill-pop {
+  display: none;
+}
+@media (hover: hover) {
+  .pill-wrap {
+    cursor: zoom-in;
+  }
+  .pill-pop {
+    display: block;
+    position: absolute;
+    z-index: 30;
+    left: 50%;
+    top: calc(100% + 14px);
+    width: 240px;
+    aspect-ratio: 4 / 5;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--sand);
+    box-shadow: 0 30px 60px -24px rgba(19, 32, 42, 0.45);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -10px) scale(0.92);
+    transform-origin: 50% 0;
+    transition:
+      opacity 0.35s ease,
+      transform 0.6s var(--ease);
+  }
+  .pill-pop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pill-wrap:hover .pill {
+    transform: scale(1.06);
+  }
+  .pill-wrap:hover .pill-pop {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
 }
 
 /* Cabecera */
@@ -865,12 +910,11 @@ textarea.input {
   }
   @keyframes pillIn {
     from {
-      width: 0;
+      clip-path: inset(0 50% 0 50% round 999px);
       opacity: 0;
-      margin: 0;
     }
     to {
-      width: 1.7em;
+      clip-path: inset(0 0 0 0 round 999px);
       opacity: 1;
     }
   }
@@ -917,8 +961,12 @@ textarea.input {
   .pillar:hover .word {
     transform: none;
   }
-  .pill:hover {
-    width: 1.7em;
+  .pill-wrap:hover .pill {
+    transform: none;
+  }
+  .pill-pop {
+    transition: opacity 0.2s ease !important;
+    transform: translate(-50%, 0) !important;
   }
   .belief:hover,
   .channel:hover {
