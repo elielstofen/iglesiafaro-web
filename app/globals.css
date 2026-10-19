@@ -1165,3 +1165,14 @@ textarea.input {
     font-size: 170px;
   }
 }
+
+/* Botón "Ofrendar" de la cabecera: separado del menú y más discreto */
+.header-cta.btn-outline {
+  border-color: rgba(26, 23, 20, 0.28);
+}
+.header-cta.btn-outline:hover,
+.header-cta.btn-outline[aria-current="page"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--cream);
+}

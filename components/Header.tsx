@@ -5,6 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
 
+// "Ofrendar" va aparte, a la derecha, con otro estilo.
+const mainNav = nav.filter((item) => item.href !== "/ofrendar");
+
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -35,14 +38,14 @@ export default function Header() {
             faro
           </Link>
           <nav className="nav" aria-label="Principal">
-            {nav.map((item) => (
+            {mainNav.map((item) => (
               <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
                 {item.label}
               </Link>
             ))}
           </nav>
-          <Link href="/visitanos" className="btn btn-dark btn-sm header-cta">
-            Ven el domingo
+          <Link href="/ofrendar" className="btn btn-outline btn-sm header-cta" aria-current={pathname === "/ofrendar" ? "page" : undefined}>
+            Ofrendar
           </Link>
           <button
             type="button"
@@ -74,7 +77,7 @@ export default function Header() {
           <Link href="/" tabIndex={open ? 0 : -1}>
             Inicio
           </Link>
-          {nav.map((item) => (
+          {mainNav.map((item) => (
             <Link key={item.href} href={item.href} tabIndex={open ? 0 : -1} aria-current={pathname === item.href ? "page" : undefined}>
               {item.label}
             </Link>
@@ -84,8 +87,8 @@ export default function Header() {
           <p className="muted" style={{ margin: "0 0 20px", fontSize: 16 }}>
             {site.meeting.day}, {site.meeting.time} - {site.meeting.venue}, Pozuelo
           </p>
-          <Link href="/visitanos" className="btn btn-dark" style={{ width: "100%" }} tabIndex={open ? 0 : -1}>
-            Ven este domingo
+          <Link href="/ofrendar" className="btn btn-outline" style={{ width: "100%" }} tabIndex={open ? 0 : -1}>
+            Ofrendar
           </Link>
         </div>
       </div>
