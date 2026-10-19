@@ -8,6 +8,8 @@ import { nextSunday } from "@/lib/sunday";
 // Se regenera cada hora: actualiza la fecha del próximo domingo y los posts de Instagram.
 export const revalidate = 3600;
 
+const VERSE = "Yo soy la luz del mundo; el que me sigue no andará en tinieblas, sino que tendrá la luz de la vida.";
+
 const pillars = [
   { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/biblia.webp", alt: "Un hombre lee la Biblia durante una reunión" },
   { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/manos-alzadas.webp", alt: "Un joven adora con los ojos cerrados y la mano en el pecho" },
@@ -160,9 +162,13 @@ export default function Home() {
       {/* 5. Versículo */}
       <section className="sec" style={{ paddingBottom: 0 }}>
         <div className="wrap rv" style={{ maxWidth: 1100, textAlign: "center" }}>
-          <blockquote style={{ margin: 0 }}>
+          <blockquote className="verse" style={{ margin: 0 }}>
             <p className="serif" style={{ margin: 0, fontSize: "clamp(34px, 4.4vw, 60px)", lineHeight: 1.2 }}>
-              Yo soy la luz del mundo; el que me sigue no andará en tinieblas, sino que tendrá la luz de la vida.
+              {VERSE.split(" ").map((w, i) => (
+                <span key={i} className="lw" style={{ "--i": i } as React.CSSProperties}>
+                  {w}{" "}
+                </span>
+              ))}
             </p>
             <footer className="muted" style={{ marginTop: 40, fontSize: 16, letterSpacing: "0.04em" }}>
               Juan 8:12

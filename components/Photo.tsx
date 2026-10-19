@@ -13,7 +13,7 @@ type Props = {
 // Foto recortada que rellena su contenedor, con el tratamiento de color de la web.
 export default function Photo({ src, alt, className = "", style, position = "center", priority, sizes = "(max-width: 900px) 100vw, 50vw" }: Props) {
   return (
-    <div className={`ph ${className}`} style={style}>
+    <div className={`ph par ${className}`} style={style}>
       <Image
         src={src}
         alt={alt}

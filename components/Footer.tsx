@@ -39,7 +39,11 @@ export default function Footer() {
         </div>
       </div>
       <p className="wordmark" aria-hidden="true">
-        faro
+        {"faro".split("").map((l, i) => (
+          <span key={i} style={{ "--i": i } as React.CSSProperties}>
+            {l}
+          </span>
+        ))}
       </p>
     </footer>
   );

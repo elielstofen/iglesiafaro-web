@@ -954,6 +954,63 @@ textarea.input {
   }
 }
 
+/* Movimiento ligado al scroll (Chrome, Edge y Safari recientes; en el resto
+   la web se ve igual, solo que sin estos efectos). */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /* Fotos: un leve parallax dentro de su marco */
+    @keyframes par {
+      from { translate: 0 -5%; }
+      to { translate: 0 5%; }
+    }
+    .par img {
+      scale: 1.12;
+      animation: par linear both;
+      animation-timeline: view();
+    }
+    .a3.par img {
+      animation: zoom 2.2s var(--ease) 0.5s both, par linear both;
+      animation-timeline: auto, view();
+    }
+
+    /* Versículo: las palabras se van iluminando al bajar */
+    .verse {
+      view-timeline: --verse block;
+    }
+    @keyframes lightword {
+      from { opacity: 0.16; }
+      to { opacity: 1; }
+    }
+    .verse .lw {
+      animation: lightword linear both;
+      animation-timeline: --verse;
+      animation-range: cover calc(12% + var(--i) * 1.4%) cover calc(24% + var(--i) * 1.4%);
+    }
+
+    /* Pie: las letras de "faro" suben al llegar al final */
+    .wordmark span {
+      display: inline-block;
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry calc(var(--i) * 10%) entry calc(60% + var(--i) * 13%);
+    }
+    @keyframes rise {
+      from { translate: 0 55%; opacity: 0; }
+      to { translate: 0 0; opacity: 1; }
+    }
+
+    /* Cabecera: aparece una línea fina en cuanto empiezas a bajar */
+    @keyframes headline {
+      to { box-shadow: 0 1px 0 rgba(26, 23, 20, 0.08); }
+    }
+    .header {
+      animation: headline linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 80px;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
