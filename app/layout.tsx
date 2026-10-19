@@ -5,6 +5,7 @@ import "@fontsource/albert-sans/500.css";
 import "@fontsource/cormorant-garamond/300-italic.css";
 import "@fontsource/cormorant-garamond/400-italic.css";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="contenido">{children}</main>
         <Footer />
+        <Analytics />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>
