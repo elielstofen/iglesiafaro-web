@@ -15,7 +15,7 @@ export default function Ofrendar() {
         <div className="wrap">
           <p className="eyebrow muted a1">Ofrendar</p>
           <h1 className="h t-hero-xl a2" style={{ marginTop: 32 }}>
-            con <Pill src="/img/oracion.webp" /> <span className="serif accent">generosidad.</span>
+            con <Pill src="/img/manos-abiertas.webp" position="center 32%" /> <span className="serif accent">generosidad.</span>
           </h1>
           <p className="muted lead a4" style={{ margin: "40px 0 0", maxWidth: 620 }}>
             Tu ofrenda sostiene lo que Dios está haciendo en Faro y en nuestra ciudad. Gracias por sembrar con nosotros.

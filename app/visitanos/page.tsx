@@ -25,14 +25,14 @@ export default function Visitanos() {
         <div className="wrap">
           <p className="eyebrow muted a1">Visítanos</p>
           <h1 className="h t-hero-xl a2" style={{ marginTop: 32 }}>
-            te esperamos <Pill src="/img/sentadas.webp" hideMobile /> <span className="serif line accent">este domingo.</span>
+            te esperamos <Pill src="/img/adoracion-chica.webp" position="center 26%" hideMobile /> <span className="serif line accent">este domingo.</span>
           </h1>
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
               className="a3"
-              src="/img/risa.webp"
-              alt="Una mujer de la comunidad ríe mientras saluda a alguien"
-              position="center 30%"
+              src="/img/predicacion.webp"
+              alt="Un domingo en Faro: la comunidad escucha la predicación en el Eurostars i-Hotel"
+              position="center 45%"
               priority
               style={{ height: "clamp(440px, 45vw, 620px)" }}
               sizes="(max-width: 900px) 100vw, 66vw"

@@ -12,7 +12,7 @@ const VERSE = "Yo soy la luz del mundo; el que me sigue no andará en tinieblas,
 
 const pillars = [
   { n: "(i)", word: "Palabra", text: "Basados en su Palabra, que nos ha sido revelada.", img: "/img/lectura.webp", alt: "Un hombre lee la Biblia durante una reunión" },
-  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/manos-alzadas.webp", alt: "Un joven adora con los ojos cerrados y la mano en el pecho" },
+  { n: "(ii)", word: "Presencia", text: "Buscamos su Presencia, donde adoramos íntegramente.", img: "/img/adoracion-pecho.webp", alt: "Un joven adora con los ojos cerrados, la mano en el pecho y el brazo alzado" },
   { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla.", img: "/img/comunidad.webp", alt: "Varias personas de la comunidad oran juntas por un hombre" },
 ];
 
@@ -30,7 +30,7 @@ export default function Home() {
             {sunday.isToday ? "Hoy" : "Este domingo"}, {m.time} - <span className="hide-m">{m.venue},&nbsp;</span>Pozuelo
           </Link>
           <h1 className="h t-hero a2" style={{ marginTop: 48, maxWidth: 1180 }}>
-            para dar luz <Pill src="/img/oracion.webp" /> a los que están <span className="nb">en oscuridad</span>{" "}
+            para dar luz <Pill src="/img/oracion-mic.webp" position="center 22%" /> a los que están <span className="nb">en oscuridad</span>{" "}
             <span className="serif line accent">
               y guiar nuestros pies por <span className="nb">caminos de paz.</span>
             </span>
@@ -47,7 +47,7 @@ export default function Home() {
               sizes="(max-width: 900px) 100vw, 66vw"
             />
             <div className="a4" style={{ display: "flex", flexDirection: "column", gap: 36 }}>
-              <Photo className="hide-m" src="/img/amigas.webp" alt="Un grupo de chicas de Faro, abrazadas y riendo" style={{ height: 340 }} sizes="33vw" />
+              <Photo className="hide-m" src="/img/amigas-2.webp" alt="Un grupo de chicas de Faro, abrazadas y riendo" position="center 42%" style={{ height: 340 }} sizes="33vw" />
               <p className="body-l" style={{ margin: 0 }}>
                 Buscando juntos a Jesús en el oeste de Madrid. <span className="muted">Te esperamos cada domingo.</span>
               </p>
@@ -118,7 +118,7 @@ export default function Home() {
             En la tierra como en el cielo.
           </p>
           <p className="h rv rvp" style={{ fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.12, maxWidth: 1180 }}>
-            Faro es un movimiento por Jesús <Pill src="/img/risa.webp" /> de gente sencilla <Pill src="/img/sentadas.webp" /> que adora{" "}
+            Faro es un movimiento por Jesús <Pill src="/img/canto.webp" position="center 30%" /> de gente sencilla <Pill src="/img/manos-arriba.webp" position="center 28%" /> que adora{" "}
             <span className="serif accent">
               <span className="nb">a un Dios</span> extraordinario.
             </span>
