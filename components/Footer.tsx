@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { nav, site } from "@/lib/site";
+import Wordmark from "./Wordmark";
 
 export default function Footer() {
   return (
@@ -43,19 +44,13 @@ export default function Footer() {
             FEREDE
           </a>
           , Federación de Entidades Religiosas Evangélicas de España, y del{" "}
-          <a href="https://cemadrid.es" target="_blank" rel="noopener">
+          <a href="https://www.cemadrid.es/" target="_blank" rel="noopener">
             Consejo Evangélico de Madrid
           </a>
           .
         </p>
       </div>
-      <p className="wordmark" aria-hidden="true">
-        {"faro".split("").map((l, i) => (
-          <span key={i} style={{ "--i": i } as React.CSSProperties}>
-            {l}
-          </span>
-        ))}
-      </p>
+      <Wordmark />
     </footer>
   );
 }
