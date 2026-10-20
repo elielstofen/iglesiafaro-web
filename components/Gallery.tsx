@@ -10,7 +10,8 @@ const frames: Frame[] = [
   { src: "/img/banda.webp", alt: "El equipo de alabanza toca al empezar la reunión", size: "w", align: "end" },
   { src: "/img/canto.webp", alt: "Una chica canta con los ojos cerrados", size: "s", align: "top", position: "center 30%" },
   { src: "/img/manos-arriba.webp", alt: "Una mujer adora con los brazos alzados", size: "l", align: "mid", position: "center 30%" },
-  { src: "/img/oracion-mic.webp", alt: "Virginia, la pastora, ora con el micrófono", size: "m", align: "end", position: "center 25%" },
+  { src: "/img/oracion-grupo.webp", alt: "Un grupo de jóvenes ora junto, con las manos sobre los hombros", size: "m", align: "end", position: "center 30%" },
+  { src: "/img/oracion-mic.webp", alt: "Virginia, la pastora, ora con el micrófono", size: "s", align: "top", position: "center 25%" },
   { src: "/img/adoracion-pecho.webp", alt: "Un joven adora con los ojos cerrados y la mano en el pecho", size: "l", align: "top", position: "center 25%" },
 ]
 

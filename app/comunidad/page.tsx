@@ -130,7 +130,7 @@ export default function Comunidad() {
               <h2 className="h t-1" style={{ marginBottom: 32 }}>
                 a lo largo <span className="serif line accent">del año.</span>
               </h2>
-              <Photo className="year-photo" src="/img/comunidad.webp" alt="Varias personas de la comunidad oran juntas por un hombre durante un retiro" position="center 35%" sizes="(max-width: 900px) 100vw, 40vw" />
+              <Photo className="year-photo" src="/img/camino-retiro.webp" alt="Tres jóvenes caminan juntos por un sendero durante un retiro" position="center 45%" sizes="(max-width: 900px) 100vw, 40vw" />
             </div>
             <div>
               <div className="rows">

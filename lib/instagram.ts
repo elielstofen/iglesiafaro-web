@@ -27,7 +27,7 @@ export const fallbackPosts: IgPost[] = [
   { id: "f1", image: "/img/adoracion-chica.webp", alt: "Una chica adora con las manos abiertas", href: PROFILE },
   { id: "f2", image: "/img/alegria.webp", alt: "Una mujer de la comunidad sonríe en un retiro", href: PROFILE },
   { id: "f3", image: "/img/manos-abiertas.webp", alt: "Una mujer ora con las manos abiertas", href: PROFILE },
-  { id: "f4", image: "/img/comunidad.webp", alt: "Varias personas oran juntas por un hombre durante un retiro", href: PROFILE },
+  { id: "f4", image: "/img/abrazo-retiro.webp", alt: "Dos hombres se abrazan durante un retiro", href: PROFILE },
 ]
 
 function shortCaption(caption?: string) {
