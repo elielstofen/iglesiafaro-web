@@ -16,24 +16,24 @@ const SHARE_DESCRIPTION = "Un movimiento de Jesús de gente sencilla que adora a
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Iglesia Faro - Tu familia en Madrid",
+    default: "Iglesia Faro - Buscando juntos a Jesús en el oeste de Madrid",
     template: "%s - Iglesia Faro",
   },
   description: site.description,
   openGraph: {
-    title: "Iglesia Faro - Tu familia en Madrid",
+    title: "Iglesia Faro - Buscando juntos a Jesús en el oeste de Madrid",
     description: SHARE_DESCRIPTION,
     url: site.url,
     siteName: site.name,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/img/og-faro.jpg", width: 1200, height: 630, alt: "Logotipo de Faro, 'tu familia en Madrid', junto a una foto de un bautismo" }],
+    images: [{ url: "/img/og-faro-2.jpg", width: 1200, height: 630, alt: "Logotipo de Faro, 'buscando juntos a Jesús', junto a una foto de un bautismo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iglesia Faro - Tu familia en Madrid",
+    title: "Iglesia Faro - Buscando juntos a Jesús en el oeste de Madrid",
     description: SHARE_DESCRIPTION,
-    images: ["/img/og-faro.jpg"],
+    images: ["/img/og-faro-2.jpg"],
   },
   alternates: { canonical: "/" },
 };

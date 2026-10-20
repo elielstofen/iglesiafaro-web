@@ -238,7 +238,7 @@ export default function Home() {
           <div className="split center rv">
             <div>
               <h2 className="h t-2" style={{ marginBottom: 40 }}>
-                Faro es más que una iglesia. <span className="serif line accent">Es tu familia en Madrid.</span>
+                Juntos, <span className="serif line accent">también entre semana.</span>
               </h2>
               <p className="muted" style={{ margin: "0 0 48px", fontSize: 19, maxWidth: 500 }}>
                 Versículo del día, reflexiones del equipo pastoral, eventos y retiros, y peticiones de oración. Todo en la app Faro Madrid.

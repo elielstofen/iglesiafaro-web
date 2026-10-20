@@ -116,7 +116,7 @@ export default function Sobre() {
       <section className="sec sand">
         <div className="wrap rv" style={{ textAlign: "center" }}>
           <h2 className="h t-1" style={{ margin: "0 auto 48px", maxWidth: 1000 }}>
-            Faro es más que una iglesia. <span className="serif line accent">Es tu familia en Madrid.</span>
+            Hay un sitio para ti. <span className="serif line accent">Te esperamos el domingo.</span>
           </h2>
           <div className="btns btns-spaced" style={{ justifyContent: "center" }}>
             <Link className="btn btn-dark" href="/visitanos">
