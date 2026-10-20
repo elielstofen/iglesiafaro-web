@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import FaroForma from "@/components/FaroForma";
 import Photo from "@/components/Photo";
 import { Arrow, Pill } from "@/components/Bits";
 
@@ -113,8 +112,6 @@ export default function Sobre() {
           </div>
         </div>
       </section>
-
-      <FaroForma />
 
       <section className="sec sand">
         <div className="wrap rv" style={{ textAlign: "center" }}>

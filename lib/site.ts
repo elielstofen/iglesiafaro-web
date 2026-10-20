@@ -50,6 +50,7 @@ export const site = {
 export const nav = [
   { href: "/sobre-nosotros", label: "Sobre nosotros" },
   { href: "/visitanos", label: "Visítanos" },
+  { href: "/comunidad", label: "Comunidad" },
   { href: "/ofrendar", label: "Ofrendar" },
   { href: "/contacto", label: "Contacto" },
 ];

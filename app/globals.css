@@ -1509,3 +1509,47 @@ textarea.input {
 .navy .num {
   color: var(--on-navy-muted);
 }
+
+/* Comunidad: actividades de cada semana */
+.acts > .act {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+  gap: 40px;
+  align-items: start;
+  padding: 48px 0;
+  border-top: 1px solid var(--line-sand);
+}
+.acts > .act:last-child {
+  border-bottom: 1px solid var(--line-sand);
+}
+.act-name {
+  margin: 0;
+  font-size: clamp(48px, 5.4vw, 80px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.act-name .serif {
+  letter-spacing: -0.01em;
+}
+.act-where {
+  margin: 18px 0 0;
+  font-size: 16px;
+  color: var(--muted-sand);
+}
+.act-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  padding-top: 12px;
+}
+@media (max-width: 900px) {
+  .acts > .act {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 36px 0;
+  }
+  .act-body {
+    padding-top: 0;
+  }
+}

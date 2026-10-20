@@ -9,6 +9,10 @@ type Status = "idle" | "sending" | "ok" | "error";
 const MOTIVOS: Record<string, string> = {
   transferencia: "Hola, me gustaría recibir los datos para hacer una transferencia a la iglesia.",
   forma: "Hola, me gustaría apuntarme a Faro Forma.",
+  casas: "Hola, me gustaría ir a un encuentro de Faro en Casas.",
+  letras: "Hola, me gustaría unirme a Faro en Letras.",
+  oracion: "Hola, me gustaría recibir el enlace de la oración online de los miércoles.",
+  comunidad: "Hola, me gustaría saber más sobre las actividades de la comunidad.",
 };
 
 export default function ContactForm({ id = "c", title }: { id?: string; title?: React.ReactNode }) {
