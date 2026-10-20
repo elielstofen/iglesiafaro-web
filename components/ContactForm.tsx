@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
+// Mensajes que se rellenan solos al llegar desde otro botón de la web (/contacto?motivo=...)
+const MOTIVOS: Record<string, string> = {
+  transferencia: "Hola, me gustaría recibir los datos para hacer una transferencia a la iglesia.",
+  forma: "Hola, me gustaría apuntarme a Faro Forma.",
+};
+
 export default function ContactForm({ id = "c", title }: { id?: string; title?: React.ReactNode }) {
   const [status, setStatus] = useState<Status>("idle");
+  const msg = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const motivo = new URLSearchParams(window.location.search).get("motivo");
+    if (motivo && MOTIVOS[motivo] && msg.current && !msg.current.value) msg.current.value = MOTIVOS[motivo];
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -53,7 +65,7 @@ export default function ContactForm({ id = "c", title }: { id?: string; title?: 
       </div>
       <div className="field">
         <label htmlFor={`${id}-msg`}>Tu mensaje</label>
-        <textarea id={`${id}-msg`} name="mensaje" className="input" rows={3} required maxLength={4000} />
+        <textarea ref={msg} id={`${id}-msg`} name="mensaje" className="input" rows={3} required maxLength={4000} />
       </div>
       <input className="hp" type="text" name="web" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="check">

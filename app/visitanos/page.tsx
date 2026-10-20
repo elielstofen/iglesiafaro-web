@@ -155,9 +155,9 @@ export default function Visitanos() {
             Si quieres saber algo antes de venir, escríbenos. Te respondemos encantados.
           </p>
           <div className="btns btns-spaced" style={{ justifyContent: "center" }}>
-            <a className="btn btn-dark" href={`mailto:${site.email}`}>
+            <Link className="btn btn-dark" href="/contacto#escribenos">
               Escríbenos
-            </a>
+            </Link>
             <Arrow href="/contacto">Otras formas de contacto</Arrow>
           </div>
         </div>

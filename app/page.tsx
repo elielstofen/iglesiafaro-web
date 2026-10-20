@@ -17,12 +17,6 @@ const pillars = [
   { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla." },
 ];
 
-const forma = [
-  { n: "(i)", t: "Por niveles", d: "Un recorrido por etapas, desde los fundamentos de la fe." },
-  { n: "(ii)", t: "Online", d: "Un encuentro a la semana, desde casa." },
-  { n: "(iii)", t: "Presencial", d: "Otro encuentro a la semana, cara a cara." },
-];
-
 export default function Home() {
   const sunday = nextSunday();
   const m = site.meeting;
@@ -184,36 +178,6 @@ export default function Home() {
               <footer className="verse-ref">Juan 8:12</footer>
             </blockquote>
           </div>
-        </div>
-      </section>
-
-      {/* Faro Forma: discipulado entre semana */}
-      <section className="sec sand" aria-labelledby="forma-title">
-        <div className="wrap">
-          <div className="split end rv" style={{ marginBottom: 72 }}>
-            <h2 id="forma-title" className="h t-1">
-              faro <span className="serif accent">forma.</span>
-            </h2>
-            <p className="muted" style={{ margin: 0, fontSize: 19 }}>
-              Nuestro discipulado: un estudio de la Biblia por niveles para conocer mejor a Jesús y aprender a seguirle, juntos.
-            </p>
-          </div>
-          <div className="rows">
-            {forma.map((f) => (
-              <article key={f.t} className="pillar forma rv">
-                <span className="num">{f.n}</span>
-                <h3 className="h word" style={{ fontSize: "clamp(40px, 4.4vw, 64px)" }}>
-                  {f.t}
-                </h3>
-                <p className="muted" style={{ margin: 0, fontSize: 19 }}>
-                  {f.d}
-                </p>
-              </article>
-            ))}
-          </div>
-          <p className="rv" style={{ margin: "48px 0 0" }}>
-            <Arrow href="/contacto">Quiero apuntarme</Arrow>
-          </p>
         </div>
       </section>
 

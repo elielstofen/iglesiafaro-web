@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Pill, StoreButtons } from "@/components/Bits";
 import { site } from "@/lib/site";
@@ -80,9 +81,9 @@ export default function Ofrendar() {
                 Si prefieres hacerlo desde tu banco, escríbenos y te enviamos toda la información.
               </p>
               <div className="btns btns-spaced">
-                <a className="btn btn-dark" href={`mailto:${site.email}?subject=${encodeURIComponent("Datos para transferencia")}`}>
+                <Link className="btn btn-dark" href="/contacto?motivo=transferencia#escribenos">
                   Pedir los datos
-                </a>
+                </Link>
                 <span className="muted" style={{ fontSize: 16 }}>
                   {site.email}
                 </span>

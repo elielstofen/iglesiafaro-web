@@ -50,7 +50,7 @@ export default function Contacto() {
                 </a>
               ))}
             </div>
-            <div className="form-card rv">
+            <div id="escribenos" className="form-card rv" style={{ scrollMarginTop: 100 }}>
               <ContactForm
                 id="contacto"
                 title={
