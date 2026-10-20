@@ -414,7 +414,7 @@ p {
 /* Un domingo en Faro: la sección se queda fija y las fotos pasan en horizontal */
 .gal {
   position: relative;
-  background: var(--cream);
+  background: var(--sand);
 }
 .gal-pin {
   position: relative;
@@ -473,7 +473,7 @@ p {
   margin: 0;
   overflow: hidden;
   border-radius: 6px;
-  background: var(--sand);
+  background: #ddd5c6;
   scroll-snap-align: center;
 }
 .gal-frame img {
@@ -508,6 +508,9 @@ p {
 .gal-tail {
   flex: none;
   width: 1px;
+}
+.gal .muted {
+  color: var(--muted-sand);
 }
 .gal-progress {
   position: absolute;
@@ -1450,5 +1453,55 @@ textarea.input {
     padding: 18px var(--gutter) 20px;
     background: var(--cream);
     box-shadow: 0 1px 0 var(--line);
+  }
+}
+
+/* La Café: casa de fe y cafetería */
+.cafe-title {
+  margin: 0;
+  font-weight: 300;
+  font-size: clamp(88px, 13vw, 200px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+.cafe-title .serif {
+  letter-spacing: -0.02em;
+}
+.cafe-sub {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 18px;
+  margin: 28px 0 40px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(24px, 2.4vw, 32px);
+  color: var(--muted);
+}
+.cafe-plus {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: var(--accent);
+}
+.cafe-link {
+  text-decoration: none;
+}
+.cafe-link .serif {
+  font-size: 1.2em;
+  border-bottom: 1px solid rgba(217, 195, 154, 0.4);
+  transition: border-color 0.3s ease;
+}
+.cafe-link:hover .serif {
+  border-color: var(--gold);
+}
+
+/* Móvil: la foto principal de cada página ocupa todo el ancho, sin márgenes */
+@media (max-width: 900px) {
+  .ph.bleed-m {
+    margin-left: calc(-1 * var(--gutter));
+    margin-right: calc(-1 * var(--gutter));
+    border-radius: 0;
   }
 }

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  { n: "(i)", t: "Antes", d: "Empezamos con un café y algo para desayunar. Un rato para charlar y hacer comunidad." },
+  { n: "(i)", t: "Antes", d: "Empezamos en la Café, con un café y algo para desayunar. Un rato para charlar y hacer comunidad." },
   { n: "(ii)", t: "La reunión", d: "Adoramos juntos de corazón y abrimos la Palabra, con sencillez y cerca de Dios." },
   { n: "(iii)", t: "Niños", d: "Los más pequeños tienen su propia actividad, pensada para ellos." },
-  { n: "(iv)", t: "Después", d: "Sigue el café y la charla, y algunos nos vamos a comer juntos. Así se hace familia." },
+  { n: "(iv)", t: "Después", d: "Volvemos a la Café para seguir la charla, y algunos nos vamos a comer juntos. Así se hace familia." },
 ];
 
 export default function Visitanos() {
@@ -29,7 +29,7 @@ export default function Visitanos() {
           </h1>
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
-              className="a3"
+              className="a3 bleed-m"
               src="/img/predicacion.webp"
               alt="Un domingo en Faro: la comunidad escucha la predicación en el Eurostars i-Hotel"
               position="center 45%"
@@ -89,6 +89,24 @@ export default function Visitanos() {
             ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* La Café: casa de fe y cafetería */}
+      <section id="la-cafe" className="sec cafe" aria-labelledby="cafe-title" style={{ scrollMarginTop: 60 }}>
+        <div className="wrap rv" style={{ textAlign: "center" }}>
+          <h2 id="cafe-title" className="cafe-title">
+            <span className="h">la </span>
+            <span className="serif accent">Café.</span>
+          </h2>
+          <p className="cafe-sub">
+            <span>casa de fe</span>
+            <span aria-hidden="true" className="cafe-plus">+</span>
+            <span>cafetería</span>
+          </p>
+          <p className="muted body-l" style={{ margin: "0 auto", maxWidth: 560 }}>
+            Antes y después de la reunión, el café está servido. Desayunamos algo, charlamos y nos conocemos sin prisa. Si vienes por primera vez, es el mejor sitio para empezar.
+          </p>
         </div>
       </section>
 

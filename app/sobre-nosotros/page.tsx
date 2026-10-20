@@ -46,7 +46,7 @@ export default function Sobre() {
               </p>
             </div>
             <Photo
-              className="a3"
+              className="a3 bleed-m"
               src="/img/bautismo-rio.webp"
               alt="Un bautismo: dos hombres sonríen abrazados, empapados de agua"
               position="center 18%"

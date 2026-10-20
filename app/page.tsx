@@ -2,7 +2,7 @@ import Link from "next/link";
 import Photo from "@/components/Photo";
 import ContactForm from "@/components/ContactForm";
 import Gallery from "@/components/Gallery";
-import { Arrow, AppPhone, GiveBand, InstagramGrid, MapEmbed, Pill, StoreButtons } from "@/components/Bits";
+import { Arrow, AppPhone, GiveBand, InstagramGrid, MapEmbed, StoreButtons } from "@/components/Bits";
 import { site } from "@/lib/site";
 import { nextSunday } from "@/lib/sunday";
 
@@ -17,6 +17,12 @@ const pillars = [
   { n: "(iii)", word: "Personas", text: "Guiar a las personas a Jesús de forma sincera y sencilla." },
 ];
 
+const forma = [
+  { n: "(i)", t: "Por niveles", d: "Un recorrido por etapas, desde los fundamentos de la fe." },
+  { n: "(ii)", t: "Online", d: "Un encuentro a la semana, desde casa." },
+  { n: "(iii)", t: "Presencial", d: "Otro encuentro a la semana, cara a cara." },
+];
+
 export default function Home() {
   const sunday = nextSunday();
   const m = site.meeting;
@@ -26,12 +32,8 @@ export default function Home() {
       {/* 1. Bienvenida */}
       <section style={{ padding: "96px 0 var(--section)" }}>
         <div className="wrap">
-          <Link className="status a1" href="#domingo">
-            <span className="dot" aria-hidden="true" />
-            {sunday.isToday ? "Hoy" : "Este domingo"}, {m.time} - <span className="hide-m">{m.venue},&nbsp;</span>Pozuelo
-          </Link>
-          <h1 className="h t-hero a2" style={{ marginTop: 48, maxWidth: 1180 }}>
-            para dar luz <Pill src="/img/pill-oracion-mic.webp" /> a los que están <span className="nb">en oscuridad</span>{" "}
+          <h1 className="h t-hero a2" style={{ maxWidth: 1180 }}>
+            para dar luz a los que están <span className="nb">en oscuridad</span>{" "}
             <span className="serif line accent">
               y guiar nuestros pies por <span className="nb">caminos de paz.</span>
             </span>
@@ -39,7 +41,7 @@ export default function Home() {
 
           <div className="split-84 end" style={{ marginTop: 96 }}>
             <Photo
-              className="a3"
+              className="a3 bleed-m"
               src="/img/culto-cruz.webp"
               alt="La comunidad adorando un domingo, con una cruz de luz al fondo"
               position="center 30%"
@@ -92,6 +94,13 @@ export default function Home() {
                   {m.area}
                 </p>
               </div>
+              <p style={{ margin: 0, fontSize: 18, lineHeight: 1.5 }}>
+                Antes y después de la reunión, café y algo de desayuno en{" "}
+                <Link href="/visitanos#la-cafe" className="cafe-link">
+                  <span className="serif gold">la Café</span>
+                </Link>
+                .
+              </p>
               <p className="muted" style={{ margin: 0, fontSize: 16, lineHeight: 1.7 }}>
                 <span style={{ color: "var(--on-navy)" }}>Metro ligero:</span> {m.metro}
                 <br />
@@ -138,7 +147,7 @@ export default function Home() {
       <Gallery />
 
       {/* 4. Pilares */}
-      <section className="sec sand">
+      <section className="sec">
         <div className="wrap">
           <h2 className="h t-2 rv" style={{ marginBottom: 72 }}>
             buscamos que su Luz sea el foco <span className="serif line accent">en tres sentidos.</span>
@@ -175,6 +184,36 @@ export default function Home() {
               <footer className="verse-ref">Juan 8:12</footer>
             </blockquote>
           </div>
+        </div>
+      </section>
+
+      {/* Faro Forma: discipulado entre semana */}
+      <section className="sec sand" aria-labelledby="forma-title">
+        <div className="wrap">
+          <div className="split end rv" style={{ marginBottom: 72 }}>
+            <h2 id="forma-title" className="h t-1">
+              faro <span className="serif accent">forma.</span>
+            </h2>
+            <p className="muted" style={{ margin: 0, fontSize: 19 }}>
+              Nuestro discipulado: un estudio de la Biblia por niveles para conocer mejor a Jesús y aprender a seguirle, juntos.
+            </p>
+          </div>
+          <div className="rows">
+            {forma.map((f) => (
+              <article key={f.t} className="pillar forma rv">
+                <span className="num">{f.n}</span>
+                <h3 className="h word" style={{ fontSize: "clamp(40px, 4.4vw, 64px)" }}>
+                  {f.t}
+                </h3>
+                <p className="muted" style={{ margin: 0, fontSize: 19 }}>
+                  {f.d}
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="rv" style={{ margin: "48px 0 0" }}>
+            <Arrow href="/contacto">Quiero apuntarme</Arrow>
+          </p>
         </div>
       </section>
 
