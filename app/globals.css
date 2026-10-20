@@ -583,6 +583,10 @@ p {
   text-decoration: none;
   line-height: 1;
 }
+.logo {
+  padding: 12px 0;
+  margin: -12px 0;
+}
 .logo svg {
   display: block;
   height: 23px;
@@ -1551,5 +1555,15 @@ textarea.input {
   }
   .act-body {
     padding-top: 0;
+  }
+}
+
+.ph.year-photo {
+  aspect-ratio: 4 / 5;
+}
+@media (max-width: 900px) {
+  .ph.year-photo {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 8px;
   }
 }
