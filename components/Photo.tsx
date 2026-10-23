@@ -20,6 +20,7 @@ export default function Photo({ src, alt, className = "", style, position = "cen
         fill
         sizes={sizes}
         priority={priority}
+        quality={85}
         className="img-tone"
         style={{ objectFit: "cover", objectPosition: position }}
       />

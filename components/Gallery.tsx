@@ -80,7 +80,7 @@ export default function Gallery() {
           </div>
           {frames.map((f) => (
             <figure key={f.src} className={`gal-frame gal-${f.size} gal-${f.align}`}>
-              <Image src={f.src} alt={f.alt} fill sizes="(max-width: 900px) 80vw, 45vw" className="img-tone" style={{ objectFit: "cover", objectPosition: f.position ?? "center" }} />
+              <Image src={f.src} alt={f.alt} fill sizes="(max-width: 900px) 80vw, 45vw" quality={85} className="img-tone" style={{ objectFit: "cover", objectPosition: f.position ?? "center" }} />
             </figure>
           ))}
           <div className="gal-tail" aria-hidden="true" />
