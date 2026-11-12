@@ -85,6 +85,13 @@ export default function Gallery() {
           ))}
           <div className="gal-tail" aria-hidden="true" />
         </div>
+        {/* Pista para quien no sepa que las fotos avanzan al bajar */}
+        <p className="gal-hint" aria-hidden="true">
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 1v15M1.5 10.5 7 16l5.5-5.5" />
+          </svg>
+          Sigue bajando para ver las fotos
+        </p>
         <div className="gal-progress" aria-hidden="true">
           <span />
         </div>

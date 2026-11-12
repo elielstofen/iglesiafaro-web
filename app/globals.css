@@ -524,6 +524,35 @@ p {
 .gal[data-pinned="true"] .gal-progress {
   display: block;
 }
+.gal-hint {
+  position: absolute;
+  left: var(--gutter);
+  bottom: calc(clamp(24px, 5svh, 48px) + 20px);
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink);
+  /* Se desvanece en cuanto empiezan a pasar las fotos */
+  opacity: clamp(0, calc(1 - var(--p, 0) * 7), 1);
+  pointer-events: none;
+}
+.gal[data-pinned="true"] .gal-hint {
+  display: flex;
+}
+.gal-hint svg {
+  animation: gal-hint-bob 1.8s ease-in-out infinite;
+}
+@keyframes gal-hint-bob {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
 .gal-progress span {
   display: block;
   height: 100%;
