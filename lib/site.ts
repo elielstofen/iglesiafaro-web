@@ -40,7 +40,7 @@ export const site = {
   // Google Play está en revisión: cuando esté publicada, pon aquí su enlace
   // (o en la variable NEXT_PUBLIC_GOOGLE_PLAY_URL) y el botón aparecerá solo.
   app: {
-    appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || "https://apps.apple.com/es/app/faro-madrid/id6746827660",
+    appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || "https://apps.apple.com/es/app/faro-madrid/id6766966422",
     googlePlay: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "",
   },
 
